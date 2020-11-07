@@ -1,0 +1,136 @@
+<html>   
+   <head>
+      <title>Form Validation</title>   
+      <link rel="Stylesheet" href="Stylesheet/bootstrap.min.css">    
+      
+      <script type = "text/javascript">
+       
+           
+           function validate() {
+           
+              if( document.myForm.Name.value == "" ) {
+                 alert( "Please Enter your name!" );
+                 document.myForm.Name.focus() ;
+                 return false;
+              }
+              if( document.myForm.EMail.value == "" ) {
+                 alert( "Please Enter your Email!" );
+                 document.myForm.EMail.focus() ;
+                 return false;
+              }
+              if( document.myForm.Phone.value == "" ) {
+                 
+                 alert( "Please Enter Your Phone Number!" );
+                 document.myForm.Phone.focus() ;
+                 return false;
+              }
+              if( document.myForm.Message.value == "-1" ) {
+                 alert( "Please Enter your Message!" );
+                 return false;
+              }
+             sub();
+           }
+           function sub()
+             
+              {
+                 alert("Your Message Have Been Sent");
+              }
+           
+        
+     </script>  
+     <STYLE type="text/css">
+        #submit{
+        margin-left:100px;
+        }
+        th{
+        font-size:20px;
+        background-color:green;
+        }
+        td{
+        text-align:left;
+        font-size:20px;
+        }
+        table{
+        border:1px solid black;
+        }
+        form{
+        float:left;
+        margin-right:20px;
+        }
+        p{
+        font-size:20px;}
+        h2{
+        background-color:green;
+        border:1px solid green;
+        margin-left:460px;}
+        .auto-style{
+        /* Chrome  */
+        overflow-x:-webkit-marquee;
+        -webkit-marquee-direction: up;
+        -webkit-marquee-style: scroll;
+        -webkit-marquee-speed:normal;
+        -webkit-marquee-increment: small;
+        -webkit-marquee-repetition: infinite;
+        }
+        </STYLE> 
+        
+   </head>
+   
+   <body>
+      <form action = "/cgi-bin/test.cgi" name = "myForm" onsubmit= "return(validate());">
+
+         <table cellspacing = "2" cellpadding = "2" border = "0">
+            <tr>
+               <td ></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td align = "right">Name</td>
+               <td><input type = "text" name = "Name" /></td>
+            </tr>
+            <tr>
+               <td ></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td align = "right">EMail</td>
+               <td><input type = "text" name = "EMail" /></td>
+            </tr>
+            <tr>
+               <td ></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td align = "right">Phone Number</td>
+               <td><input type = "text" name = "Phone" /></td>
+            </tr>
+            <tr>
+               <td ></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td align = "right">Your Message</td>
+               <td><input type="text" name="Message" /></td>
+            </tr>
+            <tr>
+               <td ></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td ></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>
+                  <Button type="Submit">Submit
+                  
+                  
+               <td>
+               <input type="reset">
+               </td>
+               </tr>
+            
+         </table>
+      </form>      
+   </body>
+</html>
