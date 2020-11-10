@@ -1,0 +1,33 @@
+[
+    {
+        "vapePhotoUrl": "image5.jpg",
+        "vapeName": "Hexohm",
+        "type": "Mod",
+        "harga": 500000
+    },
+    {
+        "vapePhotoUrl": "image2.png",
+        "vapeName": "Smok",
+        "type": "Pod",
+        "harga": 275000
+    },
+    {
+        "vapePhotoUrl": "image1.png",
+        "vapeName": "Voopo",
+        "type": "Pod",
+        "harga": 240000
+    },
+    {
+        "vapePhotoUrl": "image4.jpg",
+        "vapeName": "Dagger",
+        "type": "Pod",
+        "harga": 20000
+    },
+    {
+        "vapePhotoUrl": "image3.jpg",
+        "vapeName": "Charon",
+        "type": "Mod",
+        "harga": 400000
+    }
+    
+]
