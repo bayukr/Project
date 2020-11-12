@@ -1,57 +1,76 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Page of Vape Shop</title>
+
         
-        <link rel="Stylesheet" href="Stylesheet/bootstrap.min.css">
         <script src="gallery/jQuerys/jquery-1.8.3.js"></script>
         <script src="gallery/galleria-1.2.8/galleria/galleria-1.2.8.js"></script>
-        <link type="text/css" rel="stylesheet" href="Stylesheet/style.css" />
-       
+        <link rel="stylesheet" href="./Stylesheet/home.css">
     </head>
+
     <body>
-        <div style="width: 960px; height: auto; position: relative; margin:0px; padding: 29px; overflow: hidden; background-color: white;">
-            <h4><span class="auto-style2">Shop here now!</span></h4>
-            <div id="gallery">
+        <div class="container">
+            
+            <h4>Shop here now!</h4>
+
+          
+            <div class="gallery-galleria">
                 <img src="gallery/contentFiles/image1.png">
                 <img src="gallery/contentFiles/image2.png">
                 <img src="gallery/contentFiles/image3.jpg">
                 <img src="gallery/contentFiles/image4.jpg">
                 <img src="gallery/contentFiles/image5.jpg">
             </div>
-            <article>
-                <p>E-cigarettes heat nicotine (extracted from tobacco), flavorings and other chemicals to create an aerosol that you inhale. Regular tobacco cigarettes
-                     contain 7,000 chemicals, many of which are toxic. While we don’t know exactly what chemicals are in e-cigarettes, Blaha says “there’s almost
-                     no doubt that they expose you to fewer toxic chemicals than traditional cigarettes.”</p>
-                <p>An electronic cigarette is an electronic device that simulates tobacco smoking. It consists of an atomizer, a power source such as a battery, 
-                    and a container such as a cartridge or tank. Instead of cigarette smoke, the user inhales vapor, so using an e-cigarette is called "vaping".The atomizer
-                     is a heating element that atomizes a liquid solution called e-liquid. E-cigarettes are activated by taking a puff or pressing a button.
-                     Some look like traditional cigarettes.Most versions are reusable.</p>
-            </article>
-            <br><br>
+
+            
+            <div class="article">
+                <p>
+                    E-cigarettes heat nicotine (extracted from tobacco), flavorings and other chemicals to create an
+                    aerosol
+                    that you inhale. Regular tobacco cigarettes contain 7,000 chemicals, many of which are toxic. While
+                    we
+                    don’t know exactly what chemicals are in e-cigarettes, Blaha says “there’s almost no doubt that they
+                    expose you to fewer toxic chemicals than traditional cigarettes.”
+                </p>
+                <p>
+                    An electronic cigarette is an electronic device that simulates tobacco smoking. It consists of an
+                    atomizer, a power source such as a battery,
+                    and a container such as a cartridge or tank. Instead of cigarette smoke, the user inhales vapor, so
+                    using an e-cigarette is called "vaping".The atomizer
+                    is a heating element that atomizes a liquid solution called e-liquid. E-cigarettes are activated by
+                    taking a puff or pressing a button.
+                    Some look like traditional cigarettes. Most versions are reusable.
+                </p>
+            </div>
+
+            
             <details>
-                <summary><b>
-                    Available in:
-                </b></summary>
+                <summary><b>Available in:</b></summary>
                 <ul>
                     <li>Jakarta
                     <li>Bogor
                     <li>Bekasi
                 </ul>
-                Will Arrive in your city soon. 
+                Will Arrive in your city soon.
             </details>
-            <aside>
-                <p>
-                    <i><b>Number #1 Vape Online Shop
-                    <br> </b></i>
-                </p>
-            </aside>
+
+           
+            <footer>
+                <p>Number #1 Vape Online Shop</p>
+            </footer>
         </div>
+
         <script>
-            
             Galleria.loadTheme('gallery/galleria-1.2.8/galleria/themes/classic/galleria.classic.min.js');
-            $("#gallery").galleria({
-                width:950, height:400
+
+            Galleria.run('.gallery-galleria', {
+                height: 0.5625
             });
         </script>
     </body>
+
 </html>

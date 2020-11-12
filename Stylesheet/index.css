@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url("../smoke_wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+
+}
+
+@media only screen and (min-width: 640px) {
+  .container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}

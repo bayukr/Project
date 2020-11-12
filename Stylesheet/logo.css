@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  margin-top: 0.8rem;
+  color: lightslategray;
+}
+
+@media only screen and (min-width: 640px) {
+  body {
+    align-items: flex-start;
+  }
+}

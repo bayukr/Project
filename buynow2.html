@@ -1,97 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<head>
-  <script src="gallery/jQuerys/jquery-1.8.3.js"></script>
-  <script type="text/javascript">
-    function onlinebooking() {
-      alert("This item has been add to your chart")
-    }
-  </script>
-  <link rel="Stylesheet" href="Stylesheet/bootstrap.min.css">
-  <style>
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      max-width: 200px;
-      margin: auto;
-      text-align: center;
-      font-family: arial;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="gallery/jQuerys/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+      function onlinebooking() {
+        alert("This item has been add to your chart")
+      }
+    </script>
 
-    .price {
-      color: grey;
-      font-size: 22px;
-    }
+    <link rel="stylesheet" href="./Stylesheet/buynow.css">
 
-    .card button {
-      border: none;
-      outline: 0;
-      padding: 12px;
-      color: white;
-      background-color: #000;
-      text-align: center;
-      cursor: pointer;
-      width: 100%;
-      font-size: 18px;
-    }
+  </head>
 
-    .card button:hover {
-      opacity: 0.7;
-    }
+  <body>
+    <h1>Product</h1>
 
-    body {
-      background-color: wheat;
-    }
-  </style>
-
-</head>
-
-<body>
-  <h1>Product</h1>
+    <div class="card-container"></div>
+  </body>
   
+  <script src="jquery-1.8.3.js"></script>
+  <script>
+    $.getJSON("data/vapedata.json", function (data) {
 
-  <table>
-    <tr class="mydata">
-      
-    </tr>
-  </table>
-  </table>
+      $.each(data, function(key, value) {
+        var card = $("<div class='card'></div>");
 
-
-</body>
-<script src="jquery-1.8.3.js"></script>
-<script>
-  $.getJSON("data/vapedata.json", function (data) {
-
-    $.each(data, function (key, value) {
-      // disini, gua pakai jquery buat seolah2 sama kayak di HTML
-
-      // gua buat td nya dulu
-      var td = $("<td></td>");
-      // abis itu gua buat div nya
-      var div = $("<div class='card'></div>");
-
-      // di dalem div, ada element <img>
-      // nah <img> gua masukkin ke dalem div pakai `.append()`
-      // image
-      div.append("<img src='" + value.vapePhotoUrl + "' width='199px' height='200px'>");
-      // name
-      div.append("<h1>" + value.vapeName + "</h1>");
-      // price
-      div.append("<p class='price'> Rp." + value.harga + "</p>");
-      // callback
-      div.append("<p><a href='' onclick='onlinebooking();'>Add to cart</a></p>");
-
-      // append the div into td
-      td.append(div);
-
-      // finally append the td (card itself) to the container.
-      $(".mydata").append(td);
-
-      // jadi si `.append()`  maksudnya buat masukkin element ke dalam element lain.
+        card.append("<img src='" + value.vapePhotoUrl + "' alt='vape-image'>");
+        card.append("<h1>" + value.vapeName + "</h1>");
+        card.append("<p class='price'>Rp." + value.harga + "</p>");
+        card.append("<p><a href='' onclick='onlinebooking();'>Add to card</a></p>");
+        $(".card-container").append(card);
+      });
     });
-
-  });
-
-</script>
+  </script>
 
 </html>
